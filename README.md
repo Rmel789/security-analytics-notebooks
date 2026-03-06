@@ -1,25 +1,22 @@
-# security-analytics-notebooks
-AWS CloudTrail, GuardDuty, and VPC Flow log analytics with Python, Athena, and early ML anomaly detection
-
 # Security Analytics Notebooks
 
-This repo contains my AWS-based security analytics work:
-- CloudTrail exploration and normalization
-- GuardDuty finding analysis
-- Athena queries for detection engineering
-- First anomaly detection models (Isolation Forest, clustering)
-- Visualizations with Plotly
+This project contains my hands-on AWS cloud security analytics work using Python, Jupyter, and real CloudTrail-style log data.  
+The goal is to practice detection engineering, cloud telemetry analysis, and security data science techniques.
 
-## Structure
-notebooks/
-  cloudtrail_eda.ipynb
-  guardduty_analysis.ipynb
-  anomaly_detection.ipynb
+---
 
-queries/
-  athena_queries.sql
+## 📘 CloudTrail EDA Notebook
 
-## Goals
-- Build strong cloud detection engineering fundamentals
-- Produce reusable analytics notebooks
-- Support future ML-based detection pipelines
+The notebook `notebooks/cloudtrail_eda.ipynb` performs exploratory data analysis on AWS CloudTrail logs. It:
+
+- Loads sample CloudTrail JSON from `data/cloudtrail/sample_cloudtrail.json`
+- Normalizes AWS events into a pandas dataframe
+- Visualizes cloud activity over time
+- Summarizes top API calls and top principals
+- Demonstrates early detection ideas (CreateAccessKey, AssumeRole, multi-IP behavior)
+
+### How to Run
+1. Install required libraries:
+   ```bash
+   pip install pandas matplotlib
+   python -m notebook

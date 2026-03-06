@@ -1,0 +1,124 @@
+{
+  "Records": [
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE1234567890",
+        "arn": "arn:aws:iam::111122223333:user/alex",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAEXAMPLE",
+        "userName": "alex"
+      },
+      "eventTime": "2026-03-05T14:01:12Z",
+      "eventSource": "signin.amazonaws.com",
+      "eventName": "ConsoleLogin",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.15",
+      "userAgent": "Mozilla/5.0",
+      "requestParameters": null,
+      "responseElements": { "ConsoleLogin": "Success" },
+      "additionalEventData": { "MFAUsed": "Yes" },
+      "eventID": "1111aaaa-bbbb-cccc-dddd-eeeeffff0001",
+      "eventType": "AwsConsoleSignIn",
+      "managementEvent": true,
+      "readOnly": false
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "AssumedRole",
+        "principalId": "AROAE…/security-ops",
+        "arn": "arn:aws:sts::111122223333:assumed-role/SecOpsRole/security-ops",
+        "accountId": "111122223333",
+        "accessKeyId": "ASIAEXAMPLE",
+        "sessionContext": { "sessionIssuer": { "userName": "SecOpsRole" } }
+      },
+      "eventTime": "2026-03-05T14:05:40Z",
+      "eventSource": "ec2.amazonaws.com",
+      "eventName": "DescribeInstances",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.25",
+      "userAgent": "aws-cli/2.13.0",
+      "requestParameters": { "maxResults": 5 },
+      "responseElements": null,
+      "eventID": "1111aaaa-bbbb-cccc-dddd-eeeeffff0002",
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "readOnly": true
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE1234567890",
+        "arn": "arn:aws:iam::111122223333:user/alex",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAEXAMPLE",
+        "userName": "alex"
+      },
+      "eventTime": "2026-03-05T14:08:05Z",
+      "eventSource": "s3.amazonaws.com",
+      "eventName": "GetObject",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.15",
+      "userAgent": "aws-sdk-java/1.12",
+      "requestParameters": {
+        "bucketName": "corp-logs-archive",
+        "key": "reports/weekly/report.csv"
+      },
+      "responseElements": null,
+      "additionalEventData": { "SignatureVersion": "SigV4" },
+      "eventID": "1111aaaa-bbbb-cccc-dddd-eeeeffff0003",
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "readOnly": true
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE9999999999",
+        "arn": "arn:aws:iam::111122223333:user/temp-user",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAEXAMPLE2",
+        "userName": "temp-user"
+      },
+      "eventTime": "2026-03-05T14:12:47Z",
+      "eventSource": "iam.amazonaws.com",
+      "eventName": "CreateAccessKey",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "198.51.100.44",
+      "userAgent": "aws-cli/2.13.0",
+      "requestParameters": { "userName": "temp-user" },
+      "responseElements": null,
+      "eventID": "1111aaaa-bbbb-cccc-dddd-eeeeffff0004",
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "readOnly": false
+    },
+    {
+      "eventVersion": "1.08",
+      "userIdentity": {
+        "type": "IAMUser",
+        "principalId": "AIDAEXAMPLE1234567890",
+        "arn": "arn:aws:iam::111122223333:user/alex",
+        "accountId": "111122223333",
+        "accessKeyId": "AKIAEXAMPLE",
+        "userName": "alex"
+      },
+      "eventTime": "2026-03-05T14:16:22Z",
+      "eventSource": "sts.amazonaws.com",
+      "eventName": "AssumeRole",
+      "awsRegion": "us-east-1",
+      "sourceIPAddress": "203.0.113.15",
+      "userAgent": "aws-cli/2.13.0",
+      "requestParameters": { "roleArn": "arn:aws:iam::111122223333:role/SecOpsRole" },
+      "responseElements": null,
+      "eventID": "1111aaaa-bbbb-cccc-dddd-eeeeffff0005",
+      "eventType": "AwsApiCall",
+      "managementEvent": true,
+      "readOnly": false
+    }
+  ]
+}

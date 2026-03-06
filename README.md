@@ -20,3 +20,18 @@ The notebook `notebooks/cloudtrail_eda.ipynb` performs exploratory data analysis
    ```bash
    pip install pandas matplotlib
    python -m notebook
+   
+## 🛠️ Go‑Forward Git Workflow (My Personal Notes)
+
+```bash
+# Always pull latest changes first (avoids conflicts)
+git pull --rebase origin main
+
+# Stage the files I changed
+git add <path/to/file>
+
+# Commit with a meaningful message
+git commit -m "message"
+
+# Push my changes to GitHub
+git push
